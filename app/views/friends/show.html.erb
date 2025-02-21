@@ -1,0 +1,21 @@
+
+<style>
+  .custom-jumbotron {
+    background-color: #EEEEEE; /* Màu vàng */
+    color: #333; /* Chữ màu tối */
+    padding: 30px; /* Khoảng cách bên trong */
+  }
+</style>
+
+<div class="jumbotron custom-jumbotron">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>  
+  <p class="lead"><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
+  <br/>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+  <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
+</div>
+
+
