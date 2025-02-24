@@ -9,12 +9,15 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Twitter</th>
+        <th>User Id</th>
         <th colspan="2"></th>
       </tr>
     </thead>
     <tbody>
     <% @friends.each do |friend| %>
+      <% if friend.user == current_user %>
         <%= render friend %>
+      <% end %>
     <% end %>
     </tbody>
   </table>
