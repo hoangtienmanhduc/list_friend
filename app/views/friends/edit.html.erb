@@ -6,7 +6,8 @@
 
 <br>
 
-<div>
+<div class="d-flex gap-2">
   <%= link_to "Show this friend", @friend, class:"btn btn-secondary" %> 
+  <%= button_to "Delete", @friend, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
   <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
 </div>
